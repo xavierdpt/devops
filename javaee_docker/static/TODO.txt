@@ -1,0 +1,10 @@
+Split into images
+- ubuntu-updated  (uu)
+- ubuntu-updated + jdk (uujdk)
+- ubuntu-updated + jdk + tomcat (uutomcat)
+- ubuntu-updated + jdk + maven (uubuild)
+- ubuntu-updated + jdk + hornetq (uuhornetq)
+- ubuntu-updated + jdk + rabbitmq (uurabitmq)
+- ubuntu-updated + jdk + glassfish (uuglassfish)
+
+for uubuild : build into predefined volume
