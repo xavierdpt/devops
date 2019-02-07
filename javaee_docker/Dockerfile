@@ -6,5 +6,4 @@ COPY ./dynamic /dynamic
 RUN /static/init.sh
 USER user
 ENV HOME /home/user
-CMD /bin/bash
-
+CMD /home/user/eclipse/jee-latest-released/eclipse/eclipse
