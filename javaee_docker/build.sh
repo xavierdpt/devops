@@ -48,7 +48,7 @@ if [ ! -e dynamic ] ; then
 fi
 
 
-echo "export PATH=/$DOWNLOAD_DIR/$MAVEN_DIR/bin:/$DOWNLOAD_DIR/$TOMCAT_DIR/bin:/$DOWNLOAD_DIR/$JDK_DIR/bin:$PATH" >>dynamic/init.sh
+echo "export PATH=/$DOWNLOAD_DIR/$MAVEN_DIR/bin:/$DOWNLOAD_DIR/$TOMCAT_DIR/bin:/$DOWNLOAD_DIR/$JDK_DIR/bin:\$PATH" >dynamic/init.sh
 chmod a+x dynamic/init.sh
 
-docker build -t youpi .
+docker build -t youpi --network host .
