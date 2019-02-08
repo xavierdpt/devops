@@ -1,0 +1,16 @@
+version: '3'
+services:
+  eclipse:
+    image: xavierdpt/eclipse
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix 
+      - ./sample_projects:/home/user/projects
+    depends_on:
+      - tomcat
+  tomcat: 
+    image: xavierdpt/tomcat
+    volumes:
+      - ./tomcat-users.xml:/opt/apache-tomcat-9.0.14/conf/tomcat-users.xml
+      - ./manager-context.xml:/opt/apache-tomcat-9.0.14/webapps/manager/META-INF/context.xml
+    ports:
+      - "8080:8080"
