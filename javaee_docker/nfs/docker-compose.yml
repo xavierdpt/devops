@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    image: xavierdpt/ubuntu-nfs-server
+    volumes:
+      - ./shared:/var/nfs/general
+    ports:
+      - 2049
+  client:
+    image: xavierdpt/ubuntu-nfs-client
