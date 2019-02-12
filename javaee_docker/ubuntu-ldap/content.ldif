@@ -1,0 +1,28 @@
+dn: ou=People,dc=ldap
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=ldap
+objectClass: organizationalUnit
+ou: Groups
+
+dn: cn=user,ou=Groups,dc=ldap
+objectClass: posixGroup
+cn: user
+gidNumber: 5000
+
+dn: uid=user,ou=People,dc=ldap
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: user
+sn: user
+givenName: user
+cn: user
+displayName: user
+uidNumber: 10000
+gidNumber: 5000
+userPassword: user
+gecos: user
+loginShell: /bin/bash
+homeDirectory: /home/user
