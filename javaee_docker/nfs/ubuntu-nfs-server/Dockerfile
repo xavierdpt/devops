@@ -1,6 +1,8 @@
 FROM xavierdpt/ubuntu-upgraded:latest
-RUN apt-get install -y nfs-kernel-server
-RUN mkdir /var/nfs/general -p
+ENV DEBIAN_FRONTEND noninteractive
+COPY init.sh init.sh
+RUN apt-get install -y nfs-kernel-server runit inotify-tools
+RUN mkdir -p /var/nfs/general
 RUN chown nobody:nogroup /var/nfs/general
 RUN echo "/var/nfs/general *(no_subtree_check)" >/etc/exports
-CMD ["/bin/bash"]
+CMD ["./init.sh"]

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker container run -it --rm -p 2049:2049 xavierdpt/ubuntu-nfs-server
+docker container run -d --rm -p 2049:2049 xavierdpt/ubuntu-nfs-server
